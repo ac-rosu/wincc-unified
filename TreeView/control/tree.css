@@ -1,0 +1,97 @@
+.tree-node {
+    margin-left: 12px;
+    background-color: white;
+    font-family: "Siemens Sans", Arial, sans-serif;
+    font-size: 14pt;
+}
+
+#treeContainer {
+    padding: 12px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.tree-content {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    color: rgb(111, 113, 115);
+    border-radius: 4px;
+    margin: 2px 0;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    font-size: 14pt;
+}
+
+.tree-content:hover {
+    background-color: rgba(111, 113, 115, 0.1);
+}
+
+.tree-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    color: rgb(111, 113, 115);
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+.tree-icon.expanded {
+    transform: rotate(90deg);
+}
+
+.label-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.node-label {
+    margin-right: 16px;
+}
+
+.node-value {
+    color: #dc6625;
+    font-weight: bold;
+}
+
+.tree-children {
+    display: none;
+    margin-left: 12px;
+    position: relative;
+}
+
+.tree-children::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 0;
+    bottom: 12px;
+    width: 1px;
+    background-color: rgba(111, 113, 115, 0.2);
+}
+
+.tree-children.expanded {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.tree-children .tree-content::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    width: 12px;
+    height: 1px;
+    background-color: rgba(111, 113, 115, 0.2);
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
