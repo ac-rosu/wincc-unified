@@ -3,7 +3,7 @@ WinCC Unified Custom Web Controls and Scripts
 
 #TreeView
 
-Archive the contents of the TreeView folder. The name of the zip fie shuld be {guid}.zip (Make sure the GUID is between braces)
+Archive the contents of the TreeView folder. The name of the zip fie should be {guid}.zip (Make sure the GUID is between braces)
 The GUID you can copy paste it from the manifest.json
 
 ![image](https://github.com/user-attachments/assets/ae0a2d4e-44e2-46c0-9819-d13a04305b37)
